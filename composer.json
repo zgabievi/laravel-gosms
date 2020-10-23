@@ -1,0 +1,39 @@
+{
+    "name": "zgabievi/laravel-gosms",
+    "description": "GoSMS.GE Integration for Laravel",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Zura Gabievi",
+            "email": "zura.gabievi@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Zorb\\GoSMS\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^7.2",
+        "bensampo/laravel-enum": "^1.38|^2.1",
+        "illuminate/config": "^6.0|^7.0|^8.0",
+        "illuminate/support": "^6.0|^7.0|^8.0",
+        "ext-curl": "*"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+              "Zorb\\GoSMS\\GoSMSServiceProvider"
+            ],
+            "aliases": {
+                "GoSMS": "Zorb\\GoSMS\\Facades\\GoSMS"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
