@@ -4,7 +4,7 @@
 [![Packagist](https://img.shields.io/packagist/dt/zgabievi/laravel-gosms.svg)](https://packagist.org/packages/zgabievi/laravel-gosms)
 [![license](https://img.shields.io/github/license/zgabievi/laravel-gosms.svg)](https://packagist.org/packages/zgabievi/laravel-gosms)
 
-[![laravel-gosms](https://banners.beyondco.de/GoSMS.png?theme=light&packageManager=composer+require&packageName=zgabievi%2Flaravel-gosms&pattern=architect&style=style_1&description=GoSMS.GE+Integration+for+Laravel&md=1&showWatermark=0&fontSize=100px&images=chat)](https://github.com/zgabievi/laravel-gosms)
+[![laravel-gosms](https://raw.githubusercontent.com/zgabievi/laravel-gosms/main/assets/gosms.png)](https://github.com/zgabievi/laravel-gosms)
 
 ## Table of Contents
 - [Installation](#installation)
