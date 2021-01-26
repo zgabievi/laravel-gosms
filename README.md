@@ -4,6 +4,8 @@
 [![Packagist](https://img.shields.io/packagist/dt/zgabievi/laravel-gosms.svg)](https://packagist.org/packages/zgabievi/laravel-gosms)
 [![license](https://img.shields.io/github/license/zgabievi/laravel-gosms.svg)](https://packagist.org/packages/zgabievi/laravel-gosms)
 
+[![laravel-gosms](https://banners.beyondco.de/SMS%20Sender.jpeg?theme=light&packageName=zgabievi%2Flaravel-sender&pattern=topography&style=style_1&description=SENDER.GE+Integration+for+Laravel&md=1&showWatermark=0&fontSize=100px&images=chat)](https://github.com/zgabievi/laravel-gosms)
+
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
