@@ -12,9 +12,10 @@ class GoSMS
      * @param string $mobile
      * @param string $message
      * @param string|null $from
+     * @param boolean $urgent
      * @return mixed
      */
-    public function send(string $mobile, string $message, string $from = null)
+    public function send(string $mobile, string $message, string $from = null, $urgent = false)
     {
         $from = $from ?: config('gosms.brand_name');
 
@@ -23,6 +24,7 @@ class GoSMS
             'to' => $mobile,
             'text' => $message,
             'from' => $from,
+            'urgent' => $urgent
         ], 'sendsms');
     }
 
@@ -111,5 +113,20 @@ class GoSMS
         return $this->request([
             'api_key' => config('gosms.api_key'),
         ], 'sms-balance');
+    }
+    }
+
+    /**
+     * Request Sender name
+     *
+     * @param string $name
+     * @return mixed
+     */
+    public function senderRequest($name)
+    {
+        return $this->request([
+            'api_key' => config('gosms.api_key'),
+            'name' => $name
+        ], 'sender');
     }
 }

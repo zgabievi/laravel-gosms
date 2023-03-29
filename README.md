@@ -14,6 +14,7 @@
     - [Send OTP](#send-otp)
     - [Verify OTP](#verify-otp)
     - [Check Balance](#check-balance)
+    - [Sender Request](#sender-request)
 - [Notification](#notification)
 - [Configuration](#configuration)
 - [License](#license)
@@ -51,6 +52,7 @@ This command will copy config file in your config directory.
 - [Send OTP](#send-otp)
 - [Verify OTP](#verify-otp)
 - [Check Balance](#check-balance)
+- [Sender Request](#sender-request)
 
 ### Send Message
 
@@ -215,6 +217,30 @@ class MessageController extends Controller
 } 
 ```
 
+### Sender Request
+
+```php
+use Zorb\GoSMS\Facades\GoSMS;
+
+class MessageController extends Controller
+{
+    //
+    public function __invoke()
+    {
+        // sender name
+        $brand = 'MY_BRAND';  
+
+        $result = GoSMS::senderRequest($brand);
+        
+        if ($result->success) {
+            // $result->success
+        } else {
+            // message sender name request failed
+        }
+    }
+} 
+```
+
 ## Notification
 
 You can use this package as notification channel.
@@ -254,6 +280,11 @@ Errors has its own enum `Zorb\GoSMS\Enums\Errors`
 | INVALID_BRAND_NAME | 101 |
 | NOT_ENOUGH_BALANCE | 102 |
 | MESSAGE_TOO_LONG | 103 |
+| MESSAGE_ID_NOT_FOUND | 104 |
+| INVALID_NUMBER_FORMAT | 105 |
+| NUMBER_IS_IN_BLACK_LIST | 106 |
+| BRAND_ALREADY_EXISTS | 107 |
+| BRAND_NAME_ADD_IMPOSSIBLE | 108 |
 
 ## Configuration
 
